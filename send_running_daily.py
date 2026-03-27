@@ -17,12 +17,13 @@ def get_running_news():
             {
                 "role": "user",
                 "content": (
-                    "Search the web for elite running news from the last 48 hours. "
+                    "Search the web for the latest elite running news. "
+                    "Prioritize the most recent stories at the top of LetsRun.com, "
+                    "World Athletics, Citius Mag, and The Morning Shakeout. "
                     "Focus on: professional race results, major athlete announcements, "
                     "world records or record attempts, and upcoming elite races. "
-                    "Sources like LetsRun.com, World Athletics, Citius Mag, and "
-                    "The Morning Shakeout are ideal. For Chicago news, use the "
-                    "Chicago Area Runners Association and local running event sites. "
+                    "For Chicago news, use the Chicago Area Runners Association "
+                    "and local running event sites. "
                     "Write 4 sections, each as a short bulleted list (3-5 bullets each): "
                     "Section 1: Top international elite race results and records. "
                     "Section 2: US elite running news and athlete updates. "
@@ -30,8 +31,6 @@ def get_running_news():
                     "Section 4: Chicago running scene — local races, clubs, or events. "
                     "Format each section with a bold header and bullet points. "
                     "Be specific — name athletes, times, and races. No fluff. "
-                    "Only include news published in the last 48 hours. "
-                    "If a story is older than 48 hours, skip it. "
                     "Do not include any intro sentence or preamble. Start directly with the first section header."
                 )
             }
