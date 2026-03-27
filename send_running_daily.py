@@ -39,10 +39,10 @@ def get_running_news():
     return news
 
 
-
 def get_html_paragraphs(text):
     paragraphs = text.strip().split("\n\n")
     return "<br><br>".join(f"<p>{p}</p>" for p in paragraphs if p.strip())
+
 
 def send_email(news_text):
     """Send the news via Gmail."""
