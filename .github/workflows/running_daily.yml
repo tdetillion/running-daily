@@ -3,7 +3,7 @@ name: Running Daily
 on:
   schedule:
     # 9:00 AM CT = 14:00 UTC (CDT, Mar-Nov) / change to 15:00 in winter (CST)
-    - cron: '0 14 * * *'
+    - cron: '0 14 * * 1,5'
   workflow_dispatch:  # allows you to trigger manually from GitHub UI
 
 jobs:
