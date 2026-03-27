@@ -63,7 +63,7 @@ def send_email(news_text):
       <p style="color: #888; font-size: 13px;">{today}</p>
       <hr style="border: 1px solid #eee;">
       <div style="line-height: 1.7; font-size: 15px;">
-        {"<br><br>".join(f"<p>{p}</p>" for p in news_text.strip().split("\n\n") if p.strip())}
+        {get_html_paragraphs(news_text)}
       </div>
     </body></html>
     """
