@@ -30,6 +30,8 @@ def get_running_news():
                     "Section 4: Chicago running scene — local races, clubs, or events. "
                     "Format each section with a bold header and bullet points. "
                     "Be specific — name athletes, times, and races. No fluff. "
+                    "Only include news published in the last 48 hours. "
+                    "If a story is older than 48 hours, skip it. "
                     "Do not include any intro sentence or preamble. Start directly with the first section header."
                 )
             }
@@ -47,7 +49,12 @@ def get_running_news():
 
 def get_html_paragraphs(text):
     paragraphs = text.strip().split("\n\n")
-    return "<br><br>".join(f"<p>{p}</p>" for p in paragraphs if p.strip())
+    html_paragraphs = []
+    for p in paragraphs:
+        if p.strip():
+            p = p.replace("\n", "<br>")
+            html_paragraphs.append(f"<p>{p}</p>")
+    return "<br>".join(html_paragraphs)
 
 
 def send_email(news_text):
